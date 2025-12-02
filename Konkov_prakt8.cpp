@@ -10,7 +10,7 @@ void turtle(LPVOID IDTurtle) {
 	int index = (int)IDTurtle, i = 0;
 	srand((int)IDTurtle);
 	while (i < 50) {
-		int step = rand() % 3, speed = rand() % 1000;
+		int step = rand() % 3, speed = rand() % 3000;
 		if (i >= 0 && i < 50) { track[i] = '-'; track[i + step] = png[index]; }
 		i += step;
 		Sleep(speed);
@@ -27,4 +27,5 @@ int main() {
 	}
 	system("cls");
 	std::cout << "Winner: " << winner << std::endl;
+
 }
